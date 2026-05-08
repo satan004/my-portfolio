@@ -5,10 +5,22 @@
     document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('active')));
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => { if (window.scrollY > 30) header.classList.add('scrolled'); else header.classList.remove('scrolled'); });
-    const revealSelector = '.skill-category, .experience-item, .timeline-item, .hobby-card, .project-card';
+    const revealSelector = '.skill-category, .experience-item, .timeline-item, .hobby-card, .project-card, .growth-item';
     const observer = new IntersectionObserver((entries, obs) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); entry.target.querySelectorAll('.skill-fill').forEach(f => { const level = f.getAttribute('data-level') || '0'; f.style.width = level + '%'; }); obs.unobserve(entry.target); } }); }, { threshold: 0.15 });
     document.querySelectorAll(revealSelector).forEach(el => observer.observe(el));
     window.addEventListener('load', () => { document.querySelectorAll('.skill-fill').forEach(f => { const parent = f.closest('.skill-category'); if (parent && parent.getBoundingClientRect().top < window.innerHeight) { f.style.width = (f.dataset.level || '0') + '%'; } }); });
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', (e) => { e.preventDefault(); const btn = contactForm.querySelector('button[type="submit"]'); btn.disabled = true; btn.textContent = 'Sending...'; setTimeout(() => { btn.disabled = false; btn.textContent = 'Send Message'; alert('Thank you — message simulated (no backend configured).'); contactForm.reset(); }, 800); });
+    // Dark mode toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeToggle.querySelector('i').className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+    themeToggle.querySelector('i').className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 })();

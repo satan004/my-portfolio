@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -25,12 +27,16 @@
                 </div>
                 <ul class="nav-links" id="navLinks" role="navigation">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#tech-stack">Tech Stack</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#growth">Growth</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </div>
             </nav>
         </div>
     </header>
@@ -44,7 +50,7 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I'm <span>SATAN</span><br>Full-Stack Developer</h1>
+                <h1>Hi, I'm <span>Buntit Satan</span><br>I build scalable, user-focused web applications</h1>
                 <p>I create modern, responsive web applications with clean code and engaging animations. Passionate
                     about building digital experiences that connect people and solve real-world problems.</p>
                 <a href="#contact" class="btn">Let's Connect</a>
@@ -54,6 +60,75 @@
         <div class="hero-image" aria-hidden="true"
             style="background-image: url('img/mypic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
             role="img" aria-label="Hero portrait"></div>
+    </section>
+    <!-- Tech Stack Section -->
+    <section id="tech-stack">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tech Stack</h2>
+            </div>
+            <div class="section-subtitle">
+                <p>Technologies I use to bring ideas to life</p>
+            </div>
+            <div class="tech-stack-container">
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-sass"></i>
+                    <span>SASS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>React JS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-vuejs"></i>
+                    <span>Vue JS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node JS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-laravel"></i>
+                    <span>Laravel</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-leaf"></i>
+                    <span>MongoDB</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS</span>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Skills Section -->
     <section id="skills">
@@ -188,35 +263,28 @@
             </div>
         </div>
     </section>
-    <!-- Timeline Section -->
-    <section id="timeline">
+   
+    <!-- Growth Section -->
+    <section id="growth" style="background-color: rgba(34,197,94,0.02);">
         <div class="container">
             <div class="section-title">
-                <h2>Career Timeline</h2>
+                <h2>Workshops & Certifications</h2>
             </div>
             <div class="section-subtitle">
-                <p>Key milestones in my professional development journey</p>
+                <p>Continuous learning and professional development</p>
             </div>
-            <div class="timeline-container">
-                <div class="timeline-item"><span class="timeline-date">2023</span>
-                    <h3>Advanced React Certification</h3>
-                    <p>Completed advanced React patterns and performance optimization course.</p>
+            <div class="growth-container">
+                <div class="growth-item">
+                    <h3>DevOps Workshop</h3>
+                    <p>Hands-on training in CI/CD pipelines, containerization, and cloud deployment.</p>
                 </div>
-                <div class="timeline-item"><span class="timeline-date">2022</span>
-                    <h3>First Large-Scale Project Lead</h3>
-                    <p>Led development of a fintech application with 50,000+ active users.</p>
+                <div class="growth-item">
+                    <h3>UX/UI Design Certification</h3>
+                    <p>Comprehensive course on user-centered design principles and prototyping tools.</p>
                 </div>
-                <div class="timeline-item"><span class="timeline-date">2021</span>
-                    <h3>Promotion to Senior Developer</h3>
-                    <p>Recognized for technical leadership and mentoring contributions.</p>
-                </div>
-                <div class="timeline-item"><span class="timeline-date">2020</span>
-                    <h3>Full-Stack Specialization</h3>
-                    <p>Completed comprehensive full-stack development program.</p>
-                </div>
-                <div class="timeline-item"><span class="timeline-date">2018</span>
-                    <h3>First Professional Web Project</h3>
-                    <p>Developed e-commerce platform for local retail business.</p>
+                <div class="growth-item">
+                    <h3>QA Testing Bootcamp</h3>
+                    <p>Advanced testing methodologies, automation, and quality assurance practices.</p>
                 </div>
             </div>
         </div>
@@ -267,24 +335,24 @@
                 <div class="project-card electric-card">
                     <!-- <div class="electric-badge">ANIMATED</div> -->
                     <div class="project-image">
-                        <img src="/img/pro1.png" alt="Screenshot of Project 1">
-                        <div class="project-overlay"><a class="btn" href="#projects">View</a></div>
+                        <img src="/img/pro1.png" alt="Screenshot of Restaurant Management System">
+                        <div class="project-overlay"><a class="btn" href="https://example.com/restaurant" target="_blank">Live Site</a> <a class="btn" href="https://github.com/example/restaurant" target="_blank">GitHub</a></div>
                     </div>
                     <div class="project-content">
-                        <h3>Fintech Dashboard</h3>
-                        <div class="project-tags"><span>React</span><span>Node.js</span><span>Socket</span></div>
-                        <p>Real-time analytics dashboard for financial data with strong performance optimizations.</p>
+                        <h3>Restaurant Management System</h3>
+                        <div class="project-tags"><span>Vue.js</span><span>Laravel</span><span>MySQL</span></div>
+                        <p>A comprehensive system for managing restaurant operations, including orders, inventory, and staff scheduling.</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image"><img src="/img/pro2.png"
-                            alt="Screenshot of Project 2">
-                        <div class="project-overlay"><a class="btn" href="#projects">View</a></div>
+                            alt="Screenshot of Ecommerce Platform">
+                        <div class="project-overlay"><a class="btn" href="https://example.com/ecommerce" target="_blank">Live Site</a> <a class="btn" href="https://github.com/example/ecommerce" target="_blank">GitHub</a></div>
                     </div>
                     <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <div class="project-tags"><span>Vue</span><span>Express</span><span>MongoDB</span></div>
-                        <p>Scalable storefront with search, payments and admin tools.</p>
+                        <h3>Ecommerce Platform</h3>
+                        <div class="project-tags"><span>Vue.js</span><span>Node.js</span><span>MongoDB</span></div>
+                        <p>A scalable online store with payment integration, user accounts, and admin dashboard.</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -332,7 +400,7 @@
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div><strong>Email</strong>
-                            <div><a href="mailto:alex@example.com">b.t.ts.t9696@gmail.com</a></div>
+                            <div><a href="mailto:b.t.ts.t9696@Email.com">b.t.ts.t9696@Email.com</a></div>
                         </div>
                     </div>
                     <div class="contact-item">
